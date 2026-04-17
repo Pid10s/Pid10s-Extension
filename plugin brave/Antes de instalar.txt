@@ -1,0 +1,24 @@
+¡Hola! Antes de que puedas usar las descargas mágicas al 100% en esta extensión de Brave/Chrome, necesitas enlazarla con tu ordenador. Sigue estos fáciles pasos:
+
+1. ¿TIENES NODE.JS INSTALADO?
+--------------------------------------------------
+El "cerebro" detrás de las descargas en tu PC necesita que tengas instalado Node.js. 
+- Si no lo tienes, puedes descargarlo e instalarlo con "Siguiente > Siguiente" aquí: https://nodejs.org/
+(Si ya programas en JS, seguro que lo tienes).
+
+2. EJECUTA EL INSTALADOR AUTOMÁTICO
+--------------------------------------------------
+- Hemos incluido una carpeta dentro llamada "Programa".
+- Ve adentro y dale doble clic al archivo "instalar.bat".
+- Se abrirá una pantallita negra. Lo que hará será:
+   1. Descargar el motor oficial "yt-dlp.exe" (la mejor máquina de descargar que existe).
+   2. Decirle a tu navegador Brave/Chrome de forma segura: "Oye, dejo que la extensión de mi amigo se conecte con esta carpeta".
+
+3. HABILITACIÓN DE EXTENSIÓN
+--------------------------------------------------
+Si pasas esta carpeta a tu amigo:
+1. Dile que se asegure de tener Node.JS instalado.
+2. Que ejecute "instalar.bat".
+3. Luego, que vaya a "brave://extensions/" en su navegador, pulse "Cargar extensión sin empaquetar", y elija la carpeta principal.
+
+¡Listo! Ya podréis dar al control de descarga y bajará el vídeo y el audio sincronizado en un tris directamente a esa misma carpeta "Programa" (o la de usuarios si lo configuráis allí).

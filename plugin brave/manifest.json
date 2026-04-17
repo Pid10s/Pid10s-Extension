@@ -1,0 +1,81 @@
+{
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtm/SjoGfnH6vAJR8IXKiJw6RangZUG85dhjiVPm9yG23LDjyYOPjDupYPTo61k2uVe7/Yci+jb7b7wDoBv40SUu0W4XvPSDPgFafVObkxp05RKeEoh8izFd9DNq0fWSJrQc8fjxvyAhhajxNwK6j41FiEmdpuzLdJMeJvRIe7EGMnfl7y/j902Dlw2vt4ZPO+e825iUmIBFSBe60XrM/gS7h1bHcWhkyL5c34KSvB1wPPM/8Zw9SuyMGg5mYWbK4qpVtbijOmYDxbrOCgb3SRfAd4AJIm96kZljebk52gEWxCdj1i/8kWZJgywnKjCX1q3C1pD6bf/oeHgyqde2MQQIDAQAB",
+  "manifest_version": 3,
+  "name": "Desacoplador de Pid10s",
+  "version": "1.2",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.twitch.tv/*",
+    "http://127.0.0.1:10101/*",
+    "http://localhost:10101/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.twitch.tv/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.twitch.tv/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "world": "MAIN"
+    }
+  ],
+  "commands": {
+    "volume_down": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Comma",
+        "mac": "Command+Shift+Comma"
+      },
+      "description": "Bajar volumen (YouTube y Twitch)",
+      "global": true
+    },
+    "volume_up": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Period",
+        "mac": "Command+Shift+Period"
+      },
+      "description": "Subir volumen (YouTube y Twitch)",
+      "global": true
+    },
+    "toggle_pip_shortcut": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Alt+P"
+      },
+      "description": "Activar la extensión (PiP)"
+    }
+  }
+}

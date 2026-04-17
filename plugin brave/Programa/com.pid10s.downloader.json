@@ -1,0 +1,9 @@
+{
+  "name": "com.pid10s.downloader",
+  "description": "Pid10s Downloader Native Host",
+  "path": "native_host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://kplkbjodjdgllppifacfoccdnobiiipe/"
+  ]
+}
